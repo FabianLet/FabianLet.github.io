@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NOSOTROS | ARKFE</title>
+</head>
+
+    <style> 
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: black;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Estilos de la barra de navegación */
+    header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 30px;
+            z-index: 999;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 24px;
+            padding-left: 60px;
+            color: #ecdfdf;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        header nav {
+            display: flex;
+        }
+        
+        header a {
+            color: #ecdfdf;
+            margin-right: 60px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        header a:hover {
+            color: #000000;
+        }
+
+    /* Estilos de la sección principal*/ 
+    .mision h1.contenido {
+        position: relative;
+        margin-left: -550px;
+        font-size: 30px;
+        margin-top: 90px;
+        font-family: arial;
+    }
+    
+        .nuestra {
+            color: orangered;
+
+        }
+
+        .mision {
+            color: white;
+        }
+
+    .barra{
+        width: 50%;
+        height: 4px;
+        margin: 10px 0;
+        position: relative;
+        top: 190px;
+        right: -225px;
+    }
+
+        .barra::before,
+        .barra::after{
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                top: 0;
+                margin-left:100px ;
+        }
+
+        .barra::before{
+                left: 0;
+                width: 10%;
+                height: 70%;
+                background-color: orangered;
+        }
+
+        .barra::after{
+            right: 0;
+            background-color: rgb(255, 255, 255);
+            width: 76%;
+            height: 10%; 
+            top: 40%; 
+        }
+
+    .imagen-cuadro {
+        width: 300px; /* Ajusta el ancho según tus necesidades */
+        height: 250px; /* Ajusta la altura según tus necesidades */
+        margin: -66px auto; /* Centra horizontalmente el cuadro */
+        margin-right: 220px;
+        border-top-left-radius:150px ;
+        background-color: #ccc; /* Cambia el color de fondo según tus necesidades */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .imagen-cuadro img {
+            max-width: 100%;
+            max-height: 100%;
+            text-underline-offset: under;
+        }
+
+    .finalt {
+        color:white;
+        display: inline-block;
+        font-size: 16px;
+        text-align: left;
+        font-family: Arial;
+        position: relative;
+        left: -70px; /* Ajusta el valor según tus necesidades */  
+        top: -60px
+    }
+
+        .finalt + .finalt {
+            margin-left: 60px; /* Ajusta el valor según tus necesidades */
+        }
+
+    /* Estilos de la sección principal*/ 
+    .PRINCIPAL{
+        margin-top: 100px;
+    }
+    .vision h1.descripcion {
+        position: relative;
+        margin-left: 750px;
+        font-size: 30px;
+        margin-top: 90px;
+        font-family: arial;
+    }
+        
+        .nuestra {
+            color: orangered;
+
+        }
+
+        .vision {
+            color: white;
+        }
+
+    .barra-dos{
+        width: 50%;
+        height: 4px;
+        margin: 10px 0;
+        position: relative;
+        top: 190px;
+        left: 470px;
+    }
+
+        .barra-dos::before,
+        .barra-dos::after{
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                top: 0;
+                margin-left:100px ;
+        }
+
+        .barra-dos::before{
+                left: 0;
+                width: 76%;
+                height: 10%;
+                background-color: white;
+        }
+
+        .barra-dos::after{
+            right: 0;
+            background-color: orangered;
+            width: 10%;
+            height: 70%; 
+            top: -20%; 
+        }
+
+    .imagen-cuadro-dos {
+        width: 300px; /* Ajusta el ancho según tus necesidades */
+        height: 250px; /* Ajusta la altura según tus necesidades */
+        margin: -66px auto; /* Centra horizontalmente el cuadro */
+        margin-left: 320px;
+        border-top-left-radius:150px ;
+        background-color: #ccc; /* Cambia el color de fondo según tus necesidades */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .imagen-cuadro-dos img {
+            max-width: 100%;
+            max-height: 100%;
+            text-underline-offset: under;
+        }
+
+    .finaltext {
+        color:white;
+        display: inline-block;
+        font-size: 16px;
+        text-align: left;
+        font-family: Arial;
+        position: relative;
+        left: 170px; /* Ajusta el valor según tus necesidades */  
+        top: -60px
+    }
+
+        .finaltext + .finaltext {
+            margin-left: 60px; /* Ajusta el valor según tus necesidades */
+        }
+
+
+        /* Estilos de la seccion escribenos */
+    .ESCRIBENOS {
+        height: 70vh; /* Cambiamos la altura a 'auto' para adaptarse al contenido */
+        background-color: burlywood;
+        padding-top: 50px; /* Agregamos un margen superior para el título */
+    }
+
+        /* Estilos del menú */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        }
+
+        input[type="text"] {
+            margin-top: -1000px;
+        }
+
+    .menu {
+    margin-left: 600px;
+    }
+
+        .menu label,
+        .menu input {
+            margin-top: -800px; /* Ajusta el margen superior de los campos individuales */
+        }
+
+    .contact {
+    font-size: 50px;
+    margin-left: -750px;
+    margin-top: 50px; /* Ajustamos el margen superior */
+    }
+
+        .logo-container {
+            position: relative;
+            top: 160px; /* Ajusta la posición vertical del logo */
+            left: -400px;
+            display: flex;
+            justify-content: center; /* Centramos horizontalmente el logo */
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-top: 30px; /* Ajusta el margen superior del logo */
+        }
+
+        input[type="submit"] {
+            padding: 15px 55px;
+            background-color: orangered;
+            color: black;
+            border: none;
+            cursor: pointer;
+            margin-left:522px;
+            margin-top: 60px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(250, 96, 40);
+        }
+
+    </style>
+<body>
+
+    <!--CABECERA - BARRA DE NAVEGACION-->
+    <header>
+        <div class="container">
+            <a href="http://127.0.0.1:5500/index.html" class="logo">Logo</a>
+            <nav>
+                <a href="http://127.0.0.1:5500/nosotros.html">NOSOTROS</a>
+                <a href="http://127.0.0.1:5500/portafolio.html">PORTAFOLIOS</a>
+                <a href="http://127.0.0.1:5500/servicios.html">SERVICIOS</a>
+                <a href="#">CONTACTO</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!--SECCION PRINCIPAL-->
+    <section class="PRINCIPAL">
+        <section class="mision">
+            <div class="barra"></div>
+            <h1 class="contenido"><span class="nuestra">Nuestra</span> <span class="mision">misión</span></h1>
+            <div class="imagen-cuadro">
+                <img src="" alt="Descripción de la imagen">
+            </div>
+            
+            <p class="finalt">Somos una empresa con más de 10 
+                <br>años de experiencia creando y 
+                <br>desarrollando proyectos inmobiliarios, 
+                <br>integrales de arquitectura, interiorismo y</p>
+
+            <p class="finalt">construcción; brindando los mejores 
+                <br>estándares de calidad y asesoría, cuyo 
+                <br>análisis derive en soluciones 
+                <br>innovadoras, óptimas y eficientes.</p>
+        </section>
+
+        <section class="vision">
+            <div class="barra-dos"></div>
+            <h1 class="descripcion"><span class="nuestra">Nuestra</span> <span class="vision">vision</span></h1>
+            <div class="imagen-cuadro-dos">
+                <img src="" alt="Descripción de la imagen">
+            </div>
+
+            <p class="finaltext">Consolidarnos como una empresa líder,
+                <br> reconocida a nivel nacional e 
+                <br> internacional, brindando productos y</p>
+
+            <p class="finaltext">servicios de alta calidad, seguridad y 
+                <br>sobre todo innovadores
+                <br>&nbsp; </p>
+        </section>
+    </section>
+
+    <!--SECCION ESCRIBENOS-->
+    
+</body>
+</html>

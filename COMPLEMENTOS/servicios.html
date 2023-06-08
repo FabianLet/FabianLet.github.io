@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Servicios | ARKF</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilos de la barra de navegación */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 30px;
+            z-index: 999;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 24px;
+            padding-left: 60px;
+            color: #ecdfdf;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        header nav {
+            display: flex;
+        }
+        
+        header a {
+            color: #ecdfdf;
+            margin-right: 60px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        header a:hover {
+            color: #000000;
+        }
+
+        /* Estilos de la Sección Principal*/
+        .servicios {
+            min-height: 180vh;
+            background-image: url("img/Fondo_Principal_PNG.png");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+        }
+
+        .servicios h1 {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 20px;
+            align-items: center;
+            color: white;
+        }
+
+        .nuestros {
+            color: rgb(255, 85, 0);
+        }
+
+        .servicios-text {
+            color: white;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px;
+            justify-items: center;
+            align-items: center;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .servicio {
+            text-align: left;
+            background-color: black;
+            border: 0.5px solid rgb(255, 89, 0);
+            padding: 50px;
+            border-radius: 5px;
+            color: white;
+            width: 340px;
+            height: 270px;
+        }
+
+        .servicio:last-child {
+            border-top-left-radius: 190px;
+            background-image: url(img/Fondo_Principal_PNG.png);
+            border: none;
+        }
+
+        .servicio h1{
+            margin-top: 60px;
+            margin-left: 5px;
+        }
+
+        .Construimos {
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+        }
+
+        .pensando {
+            color: rgb(255, 100, 48);
+            font-size: 35px;
+        }
+
+        .servicio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .servicio-header h3 {
+            font-size: 22px;
+            margin-right: 10px;
+            margin-top: -10px ;
+        }
+
+        .servicio-header img {
+            width: 40px;
+            margin-top: -20px;
+        }
+
+        .servicio p{
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .separator {
+            width: 100%;
+            height: 4px;
+            margin: 10px 0;
+            top: -20px;
+            position: relative;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+        }
+
+        .separator::before {
+            left: 0;
+            height: 70%;
+            width: 24%;
+            background-color: rgb(255, 98, 0);
+        }
+
+        .separator::after {
+            right: 0;
+            background-color: rgb(255, 255, 255);
+            width: 76%;
+            height: 10%; 
+            top: 40%; 
+        }
+
+        /* Estilos adicionales para el grid */
+        @media (max-width: 768px) {
+            .servicios-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Estilos de la sección Escríbenos*/
+        .escribenos{
+            background-color: #e9dfcd;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .escribenos h1{
+            font-size: 50px;
+            color: #000000;
+            text-align: center;
+            text-decoration: none;
+            margin-left: -700px; /* margen izquierdo */
+            position: relative; /* posicionamiento */
+            top: 40px; /*desplazamiento vertical */
+            margin-left: auto;
+            margin-right:930px;
+        }
+
+        .input form {
+        display: flex;
+        margin-left: 400px;
+        margin-right: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -70px;
+        }
+
+        .input .form-group {
+            margin-bottom: 20px;
+        }
+
+        .input label {
+            width: 100%;
+            font-size: 17px;
+            color: #6c6c6c;
+        }
+
+        .input input,
+        .input textarea {
+            width: 100%;
+            font-size: 17px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000000;
+            margin-top: 60px;
+            color: #ffffff;
+            font-size: 17px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #333333;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- CABECERA - BARRA DE NAVEGACIÓN -->
+    <header>
+        <div class="container">
+            <a href="http://127.0.0.1:5500/index.html" class="logo">Logo</a>
+            <nav>
+                <a href="http://127.0.0.1:5500/nosotros.html">NOSOTROS</a>
+                <a href="http://127.0.0.1:5500/portafolio.html">PORTAFOLIOS</a>
+                <a href="http://127.0.0.1:5500/servicios.html">SERVICIOS</a>
+                <a href="#">CONTACTO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL - SERVICIOS -->
+    <section class="servicios">
+        <h1><span class="nuestros">Nuestros</span> <span class="servicios-text">Servicios</span></h1>
+        <div class="servicios-grid">
+            <div class="servicio">
+                <div class="servicio-header">
+                    <h3>Diseño</h3>
+                    <img src="img/logo.png" alt="Logo del servicio 1">
+                </div>
+                <div class="separator"></div>
+                <p>Diseño y desarrollo de proyectos de 
+                    arquitectura y habilitaciones urbanas, desde 
+                    el planteamiento inicial y toma de partida, 
+                    hasta la elaboración de los expedientes 
+                    técnicos.</p>
+            </div>
+
+            <div class="servicio">
+                <div class="servicio-header">
+                    <h3>Construcción</h3>
+                    <img src="img/logo.png" alt="Logo del servicio 2">
+                </div>
+                <div class="separator"></div>
+                <p>Nuestros arquitectos e ingenieros garantizan 
+                    la correcta ejecución de obras, ejerciendo el 
+                    monitoreo y control en todas sus etapas,
+                    desde la planificación previa, hasta su 
+                    ejecución.</p>
+            </div>
+
+            <div class="servicio">
+                <div class="servicio-header">
+                    <h3>Supervisón</h3>
+                    <img src="img/logo.png" alt="Logo del servicio 3">
+                </div>
+                <div class="separator"></div>
+                <p>Gestionamos de manera integral los 
+                    proyectos de arquitectura y construcción,
+                    impulsando y formalizando las ideas de 
+                    nuestro cliente. Realizamos estudios que 
+                    garanticen la adecuada inversión en cada 
+                    proyecto.</p>
+            </div>
+
+
+            <div class="servicio">
+                <div class="servicio-header">
+                    <h3>Asesoría</h3>
+                    <img src="img/logo.png" alt="Logo del servicio 5">
+                </div>
+                <div class="separator"></div>
+                <p>Realizamos revisiones en los elementos 
+                    constructivos e instalaciones con la finalidad 
+                    de conservar las edificaciones en las mejores 
+                    condiciones.</p>
+            </div>
+
+            <div class="servicio">
+                <div class="servicio-header">
+                    <h3>Mantenimiento</h3>
+                    <img src="img/logo.png" alt="Logo del servicio 6">
+                </div>
+                <div class="separator"></div>
+                <p>Planificación y ejecución de obras de 
+                    arquitectura e ingeniería. Amplia experiencia 
+                    en obras nuevas de carácter comercial,
+                    residencial, showrooms y oficinas. Además,
+                    implementamos proyectos de ampliación,
+                    remodelación y fabricación de muebles.</p>
+            </div>
+            <div class="servicio">
+                <div class="servicio-header">
+                    <h1><span class="Construimos">Construimos<br></span> <span class="pensando">Pensando en ti</span></h1>
+            </div>
+        </div>
+    </section>
+
+         <!-- SECCIÓN ESCRÍBENOS -->
+    <section class="escribenos">
+        <h1>Escríbenos</h1>
+        <div class="logo_tres">
+            <img src="ARKFE Construcciones" alt="ARKFE Construcciones">
+                    <div class="input">
+                        <form>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre">
+                
+                            <label for="correo">Correo</label>
+                            <input type="email" id="correo" name="correo">
+                
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje"></textarea>
+
+                            <button type="submit" class="button">
+                                <span class="button__text">ENVIAR</span>
+                                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                            </button>
+                        </form>
+                    </div>                      
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Portafolios | ARKF</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 30px;
+            z-index: 999;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            font-size: 24px;
+            padding-left: 60px;
+            color: #ecdfdf;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        header nav {
+            display: flex;
+        }
+        
+        header a {
+            color: #ecdfdf;
+            margin-right: 60px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        header a:hover {
+            color: #000000;
+        }
+
+        .color-word{ color:rgb(255, 255, 255); 
+        font-size: 28px;}
+         
+        /* Estilos de la sección Principal*/
+        .principal {
+            height: 80vh;
+            background-image: url("img/Fondo_Principal_PNG.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        }
+
+        .image-container img {
+            width: 80px; /* Ajusta el tamaño de las imágenes según tus necesidades */
+            margin: 0 50px; /* Espacio entre las imágenes */
+        }
+
+        /* Estilos de la sección Proyectos*/
+
+        .ourpro {
+            background-image: url(img/Fondo_Servicios.png);
+            background-size: cover;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .ourpro h1 {
+            font-size: 38px;
+            color: #ff5500;
+            text-align: center;
+            text-decoration: none;
+            margin-left: -690px; /* margen izquierdo */
+            position: relative; /* posicionamiento */
+            top: 60px; /*desplazamiento vertical */
+            left: 0; /* desplazamiento horizontal*/
+
+        }
+
+        .separator {
+            width: 70%;
+            height: 4px;
+            margin: 10px 0;
+            position: relative;
+            top: 40px; 
+        }
+
+        .separator::before,
+        .separator::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0;
+        }
+
+        .separator::before {
+            left: 0;
+            height: 70%;
+            width: 15%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .separator::after {
+            right: 0;
+            background-color: rgb(255, 98, 0);
+            width: 85%;
+            height: 10%; 
+            top: 40%; 
+        }
+
+        /* Estilos de la sección Escríbenos*/
+        .escribenos{
+            background-color: #e9dfcd;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .escribenos h1{
+            font-size: 50px;
+            color: #000000;
+            text-align: center;
+            text-decoration: none;
+            margin-left: -700px; /* margen izquierdo */
+            position: relative; /* posicionamiento */
+            top: 40px; /*desplazamiento vertical */
+            margin-left: auto;
+            margin-right:930px;
+        }
+
+        .input form {
+        display: flex;
+        margin-left: 400px;
+        margin-right: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -70px;
+        }
+
+        .input .form-group {
+            margin-bottom: 20px;
+        }
+
+        .input label {
+            width: 100%;
+            font-size: 17px;
+            color: #6c6c6c;
+        }
+
+        .input input,
+        .input textarea {
+            width: 100%;
+            font-size: 17px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000000;
+            margin-top: 60px;
+            color: #ffffff;
+            font-size: 17px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #333333;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!--CABECERA - BARRA DE NAVEGACION-->
+    <header>
+        <div class="container">
+            <a href="http://127.0.0.1:5500/index.html" class="logo">Logo</a>
+            <nav>
+                <a href="http://127.0.0.1:5500/nosotros.html">NOSOTROS</a>
+                <a href="http://127.0.0.1:5500/portafolio.html">PORTAFOLIOS</a>
+                <a href="http://127.0.0.1:5500/servicios.html">SERVICIOS</a>
+                <a href="#">CONTACTO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <section class="principal">
+        <h2 style="text-align: center; color:rgb(255, 83, 20)";>Amplia experiencia en proyectos
+            <span style="text-align: center;" class="color-word"><br>corporativos y comerciales</span>
+        </h2>
+        <div class="image-container">
+            <img src="img/logo.png" alt="Imagen 1">
+            <img src="img/logo.png"alt="Imagen 2">
+            <img src="img/logo.png"alt="Imagen 3">
+            <img src="img/logo.png"alt="Imagen 4">
+            <img src="img/logo.png"alt="Imagen 5">
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROYECTOS -->
+    <secion class="ourpro">
+        <h1>Nuestros Proyectos</h1> 
+        <div class="separator"></div>
+        
+    </secion>
+
+    <!-- SECCIÓN ESCRÍBENOS -->
+    <section class="escribenos">
+        <h1>Escríbenos</h1>
+        <div class="logo_tres">
+            <img src="ARKFE Construcciones" alt="ARKFE Construcciones">
+                    <div class="input">
+                        <form>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre">
+                
+                            <label for="correo">Correo</label>
+                            <input type="email" id="correo" name="correo">
+                
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje"></textarea>
+
+                            <button type="submit" class="button">
+                                <span class="button__text">ENVIAR</span>
+                                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                            </button>
+                        </form>
+                    </div>                      
+    </section>
+    
+</body>
+</html>
